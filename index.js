@@ -3,7 +3,7 @@ var apicache = require('apicache')
 var cache = apicache.middleware
 const net = require('net')
 const app = express();
-const port = 8000;
+const port = 80;
 var whois = require('whois')
 
 app.get('/whois', cache('48 hours'), (req, res) => {
