@@ -3,7 +3,7 @@ var apicache = require('apicache')
 var cache = apicache.middleware
 const net = require('net')
 const app = express();
-const port = 80;
+const port = process.env.PORT || 5000;
 var whois = require('whois')
 
 app.get('/whois', cache('48 hours'), (req, res) => {
@@ -19,7 +19,7 @@ app.get('/whois', cache('48 hours'), (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`)
+    console.log(`Whois app listening on port ${port}!`)
 });
 
 
