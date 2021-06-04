@@ -5,10 +5,10 @@ const net = require('net')
 const app = express();
 const port = process.env.PORT || 5000;
 var whois = require('whois')
+var counter = 0;
 
 app.get('/whois', cache('48 hours'), (req, res) => {
-    console.log(req.query.ip)
-    console.log(net.isIP(req.query.ip))
+    console.log(++counter + "-" + req.query.ip)
     if (net.isIP(req.query.ip)) {
         whois.lookup(req.query.ip, function (err, data) {
             res.send(data)
