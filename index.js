@@ -8,6 +8,7 @@ var whois = require('whois')
 var counter = 0;
 
 var whoisoptions = {
+    "timeout": 30 * 1000, // timeout 30 seconds
     "proxy": {
         "host": "localhost",
         "port": 9050,
