@@ -9,7 +9,7 @@ var counter = 0;
 
 var whoisoptions = {
     "proxy": {
-        "host": "localhost",
+        // "host": "localhost",
         "port": 9050,
         "type": 5    // or 4
     }
