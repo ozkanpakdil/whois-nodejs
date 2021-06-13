@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "sending whois via nodejs",
   "main": "index.js",
+  "proxy": "http://localho8888st:9050/",
   "scripts": {
     "start": "node index.js"
   },
